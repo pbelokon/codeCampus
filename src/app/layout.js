@@ -1,14 +1,10 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import Header from "@/components/Header";
 import "./globals.css";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// JetBrains Font
+const jetBrain = localFont({
+  src: "../fonts/JetBrainsMono-Regular.woff2",
 });
 
 export const metadata = {
@@ -19,8 +15,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body className={jetBrain.className}>
+        <div className="wrapper">
+          <Header />
+          <section className="middle">
+            <nav className="box">Nav</nav>
+            <main className="box">Main Content</main>
+            <aside className="box">Ad unit</aside>
+          </section>
+          <footer className="box">Footer</footer>
+        </div>
       </body>
     </html>
   );
