@@ -1,0 +1,20 @@
+.header {
+  background-color: #1c1412;
+  border-bottom: 3px solid #d3ae21;
+  padding: 1em;
+  text-transform: uppercase;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper ul {
+  display: flex;
+  gap: 2em;
+}
+
+.wrapper ul li {
+  list-style: none;
+  cursor: pointer;
+}

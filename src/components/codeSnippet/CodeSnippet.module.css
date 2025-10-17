@@ -1,0 +1,12 @@
+.wrapper {
+  border-radius: 8px !important;
+}
+
+.wrapper code {
+  padding: 2em;
+}
+
+.wrapper code > div {
+  font-size: 1.125rem;
+  padding: 0px !important;
+}

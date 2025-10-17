@@ -1,32 +1,30 @@
-import Header from "@/components/Header";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import localFont from "next/font/local";
-import Navigation from "@/components/Navigation";
+import Header from "@/components/header/Header";
 
-const jetBrain = localFont({
-  src: "../fonts/JetBrainsMono-Regular.woff2",
-  display: "swap",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 
-const navItems = ["html", "css", "javascript"];
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata = {
-  title: "codecampus",
-  description: "Learning platform for everything programming",
+  title: "Code Campus",
+  description: "Programming learning platform",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={jetBrain.className}>
-        <div className="wrapper">
-          <Header navigationItems={navItems} />
-          <section className="middle">
-            <Navigation />
-            <main className="box">{children}</main>
-            <aside></aside>
-          </section>
-        </div>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Header />
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
