@@ -155,3 +155,66 @@ article {
     flex: none;
   }
 }
+
+/* mdx */
+p {
+  max-width: 75ch;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background-color: #d4c9c3;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50vh;
+}
+body > main {
+  flex: 1;
+  position: relative;
+}
+
+p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5em;
+}
+p code {
+  display: inline-block;
+  font-size: 0.9em;
+  padding: 3px 6px;
+  margin: -0.25em -1px;
+  border-radius: 3px;
+}
+
+/* content of the page */
+article {
+  max-width: 75ch;
+  height: auto;
+}
+
+main {
+  gap: 30em;
+
+  height: 100vh;
+}
+
+body {
+  color: #1c1412;
+}
+
+/* highlight */
+.highlight {
+  background-color: #d3ae21;
+  color: #1c1412;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}

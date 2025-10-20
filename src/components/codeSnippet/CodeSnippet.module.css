@@ -1,5 +1,6 @@
 .wrapper {
   border-radius: 8px !important;
+  min-width: 75ch;
 }
 
 .wrapper code {
